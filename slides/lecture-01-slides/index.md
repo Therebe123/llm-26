@@ -735,8 +735,6 @@
         <li style="margin:10px 0; class="fragment"><b>Segmentation</b><br/> what is a “word”? (esp. for Chinese / noisy text)</li>
         <li style="margin:10px 0; class="fragment"><b>Idioms & figurative language</b><br/> meaning ≠ literal words.</li>
         <li style="margin:10px 0; class="fragment"><b>Neologisms</b><br/> new words appear faster than rules/dictionaries.</li>
-        <li style="margin:10px 0; class="fragment"><b>Entity names</b><br/> titles vs common words (“Let It Be”, “A Bug’s Life”).</li>
-        <li style="margin:10px 0; class="fragment"><b>World knowledge</b><br/> understanding requires facts beyond the sentence.</li>
         <li style="margin:10px 0; class="fragment"><b>Reasoning pitfalls</b><br/> valid form ≠ valid meaning (adversarial examples).</li>
       </ul>
     </div>
@@ -916,27 +914,27 @@
 
 <section class="ppt">
   <div class="ppt-title">NLP history (1970–2017)</div>
-  <div class="ppt-line"></div>
+  <div class="ppt-line" style="margin-bottom: 6px;"></div>
 
-  <!-- Auto-fit container -->
+  <!-- use slide-relative height instead of vh -->
   <div style="
     width: 100%;
-    height: 78vh;              /* adjust: 70–78vh depending on your theme */
+    height: calc(100% - 110px);   /* adjust 100–130px if needed */
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin-top: 8px;
+    padding-top: 0;
   ">
     <img
       data-src="media/ppt/media/nlp-history_1970_2017.png"
       alt="NLP history (1970–2017)"
       style="
-        max-width: 100%;
-        max-height: 100%;
+        height: 100%;
         width: auto;
-        height: auto;
+        max-width: 100%;
         object-fit: contain;
-        border-radius: 14px;
+        object-position: top center;
+        border-radius: 2px;
         border: 1px solid rgba(0,0,0,0.12);
         box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         background: white;
@@ -992,7 +990,8 @@
       <div style="font-size:18px; opacity:.75; text-align:left; margin-right:2px;">
         Paper Link:
         <a href="https://baojian.github.io/llm-26/papers/Attention_Is_All_You_Need-2017.pdf"
-           target="_blank" rel="noopener">Attention Is All You Need (2017)</a>
+           target="_blank" rel="noopener">Attention Is All You Need (2017)</a>, <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oR9sCGYAAAAJ&citation_for_view=oR9sCGYAAAAJ:zYLM7Y9cAGgC"
+           target="_blank" rel="noopener">Citation</a>
       </div>
     </div>
     <!-- RIGHT COLUMN: single large image + paper link under it -->
