@@ -217,3 +217,5 @@ gpt-2
 **/.datasets
 datasets.zip
 **/datasets.zip
+model.pt
+**/model.pt
