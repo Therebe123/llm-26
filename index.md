@@ -29,7 +29,6 @@ This course covers the foundations and modern frontiers of Natural Language Proc
 - **TAs:**
   - Binbin Huang
   - Runze Wang
-  - Coming soon
 - **Time:** 03/05/2026–06/18/2026, Thu., 1:30 pm – 4:10 pm, <a href="assets/Fudan-2026-spring-calendar.pdf" target="_blank" rel="noopener">Fudan Calendar</a>
 - **Location:** HGX104
 - **Office Hours:** 10:00 am – 1:00 pm, Wed & C611
@@ -71,9 +70,10 @@ All standard homework assignments are completed by **Week 12**. The final month 
 
 - **Textbook & Readings**
   - [Speech and Language Processing (Jurafsky & Martin, 3rd Ed. Draft)](https://web.stanford.edu/~jurafsky/slp3/)
-  - Coming soon
+  - [Natural Language Processing: Neural Networks and Large Language Models](https://niutrans.github.io/NLPBook/)
 - **Computing & Communication**
   - **University Cluster:** [https://cfff.fudan.edu.cn/home](https://cfff.fudan.edu.cn/home)
+  - **We will use Qizhi**: [http://qz.cfff.fudan.edu.cn/](http://qz.cfff.fudan.edu.cn/)
   - **Course Repo:** [baojian/llm-26](https://github.com/baojian/llm-26)
   - **Academic Integrity:** Please check [our policies](https://baojian.github.io/llm-26/assets/Fudan-academic-integrity.pdf).
 - **AI Policy**
