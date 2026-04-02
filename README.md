@@ -1,3 +1,7 @@
-This is llm-26. Please check our website at [https://baojian.github.io/llm-26/](https://baojian.github.io/llm-26/).
-Yes,this truly llm-26!
-I am not 23 26 8
+This is llm-26. Please check our website at [https://baojian.github.io/llm-26/](https://baojian.github.io/llm-26/).  
+  
+  
+
+Yes,this truly llm-26!  
+Enjoy the course,transformer,and your lives! 
+(I am not 23 26 8)
