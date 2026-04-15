@@ -156,17 +156,19 @@ Use of AI coding assistants **is permitted**. However, you should explicitly att
 > - **Excercise: <a href="https://github.com/baojian/llm-26/blob/main/lecture-05-transformers/lecture-05-transformers.ipynb" target="_blank" rel="noopener">lecture-05-transformers.ipynb</a>**
 
 
-### Week 7 LLM Pretraining
+### Week 7 LLM Pretraining (GPT)
 
 
 > In this lecture, we introduce tpyical pretrained LLMs such as GPT-series.
 > - **Slides:** <a href="https://github.com/baojian/llm-26/blob/main/slides/lecture-06-slides/index.html" target="_blank" rel="noopener">Lecture 06 slides</a>
 > - **Readings:**
 >   - <a href="papers/lecture-06-readings-0-JM_Book_Chapter_7.pdf" target="_blank" rel="noopener">JM Book Chapter 7</a>
->   - <a href="papers/lecture-06-readings-2-Decomposable-Attention-2017.pdf" target="_blank" rel="noopener">Decomposable Attention (2017)</a>
->   - <a href="papers/lecture-06-readings-1-Transformer-paper.pdf" target="_blank" rel="noopener">Transformer (2017)</a>
->   - <a href="papers/lecture-06-readings-3-Transformer-in-equation-2019.pdf" target="_blank" rel="noopener">Transformer in Equation (2019)</a>
-> - **Excercise: <a href="https://github.com/baojian/llm-26/blob/main/lecture-05-transformers/lecture-05-transformers.ipynb" target="_blank" rel="noopener">lecture-05-transformers.ipynb</a>**
+>   - <a href="papers/lecture-06-readings-1-GPT1.pdf" target="_blank" rel="noopener">GPT1 (2018)</a>
+>   - <a href="papers/lecture-06-readings-2-GPT2.pdf" target="_blank" rel="noopener">GPT2 (2019)</a>
+>   - <a href="papers/lecture-06-readings-3-GPT3.pdf" target="_blank" rel="noopener">GPT3 (2020)</a>
+>   - <a href="papers/lecture-06-readings-4-GPT4.pdf" target="_blank" rel="noopener">GPT4 (2023)</a>
+>   - <a href="papers/lecture-06-readings-5-GPT5.pdf" target="_blank" rel="noopener">GPT5 (2025)</a>
+> - **Excercise: <a href="https://github.com/baojian/llm-26/blob/main/lecture-06-gpts/lecture-06-gpts.ipynb" target="_blank" rel="noopener">lecture-06-gpts.ipynb</a>**
 
 
 ### Week 8 Fine-tuning & PEFT
