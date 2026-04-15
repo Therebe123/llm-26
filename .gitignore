@@ -230,3 +230,7 @@ wmt14_full_03.pt
 wmt14_full_04.pt
 wmt14_full_05.pt
 wmt14_full_final.pt
+model.safetensors
+**/model.safetensors
+.venv
+**/.venv
