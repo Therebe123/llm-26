@@ -1,1 +1,3 @@
 https://hf-mirror.com
+/inspire/hdd/project/fdu-aidake-cfff/public/.local/share/uv/python/cpython-3.14.3-linux-x86_64-gnu/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-1v9a4bql'}
+  warnings.warn(
