@@ -11,11 +11,18 @@ import os
 import multiprocessing as mp
 import numpy as np
 import tiktoken
+
+
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+# change it to your local folder if you are not using qz.cfff platform.
+os.environ["HF_HOME"] = "/inspire/hdd/project/fdu-aidake-cfff/public/hf-home"
+print(os.environ.get("HF_ENDPOINT"))
+
 from datasets import load_dataset # pip install datasets
 from tqdm import tqdm # pip install tqdm
 
 # ------------------------------------------
-local_dir = "edu_fineweb10B"
+local_dir = "/inspire/hdd/project/fdu-aidake-cfff/public/baojian/global_public/datasets-models/lecture-06-gpts-edu_fineweb10B"
 remote_name = "sample-10BT"
 shard_size = int(1e8) # 100M tokens per shard, total of 100 shards
 
