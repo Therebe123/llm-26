@@ -1,8 +1,11 @@
+import sys
+import time
 import math
 from dataclasses import dataclass
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
+from transformers import GPT2Tokenizer
 
 # -----------------------------------------------------------------------------
 
@@ -177,7 +180,6 @@ class GPT(nn.Module):
         return model
 
 # -----------------------------------------------------------------------------
-import tiktoken
 
 class DataLoaderLite:
     def __init__(self, B, T):
@@ -187,8 +189,8 @@ class DataLoaderLite:
         # at init load tokens from disk and store them in memory
         with open('input.txt', 'r') as f:
             text = f.read()
-        enc = tiktoken.get_encoding('gpt2')
-        tokens = enc.encode(text)
+        tokenizer = GPT2Tokenizer.from_pretrained("./gpt2_weights")
+        tokens = tokenizer.encode(text)
         self.tokens = torch.tensor(tokens)
         print(f"loaded {len(self.tokens)} tokens")
         print(f"1 epoch = {len(self.tokens) // (B * T)} batches")
@@ -208,10 +210,6 @@ class DataLoaderLite:
             self.current_position = 0
         return x, y
 
-# -----------------------------------------------------------------------------
-# attempt to autodetect the device
-import time
-
 device = "cpu"
 if torch.cuda.is_available():
     device = "cuda"
@@ -230,7 +228,10 @@ torch.set_float32_matmul_precision('high')
 # get logits
 model = GPT(GPTConfig(vocab_size=50304))
 model.to(device)
-model = torch.compile(model)
+if sys.version_info < (3, 14):
+    model = torch.compile(model)
+else:
+    print("torch.compile skipped: not supported on Python 3.14+")
 
 max_lr = 6e-4
 min_lr = max_lr * 0.1
@@ -272,7 +273,7 @@ for step in range(max_steps):
     tokens_per_sec = tokens_processed / dt
     print(f"step {step:4d} | loss: {loss.item():.6f} | lr {lr:.4e} | norm: {norm:.4f} | dt: {dt*1000:.2f}ms | tok/sec: {tokens_per_sec:.2f}")
 
-import sys; sys.exit(0)
+sys.exit(0)
 
 # prefix tokens
 model.eval()
