@@ -28,7 +28,7 @@ The validation set of HellaSwag has a total of 10,042 examples.
 import os
 import json
 import requests
-import tiktoken
+from transformers import GPT2Tokenizer
 from tqdm import tqdm
 import torch
 import torch.nn as nn
@@ -59,7 +59,7 @@ hellaswags = {
     "test": "https://raw.githubusercontent.com/rowanz/hellaswag/master/data/hellaswag_test.jsonl",
 }
 
-enc = tiktoken.get_encoding("gpt2")
+tokenizer = GPT2Tokenizer.from_pretrained("./gpt2_weights")
 
 def download(split):
     """Downloads HellaSwag DATA_CACHE_DIR"""
@@ -89,12 +89,12 @@ def render_example(example):
     }
 
     # gather up all the tokens
-    ctx_tokens = enc.encode(ctx)
+    ctx_tokens = tokenizer.encode(ctx)
     data["ctx_tokens"] = ctx_tokens
     tok_rows = []
     mask_rows = []
     for end in endings:
-        end_tokens = enc.encode(" " + end) # note: prepending " " because GPT-2 tokenizer
+        end_tokens = tokenizer.encode(" " + end) # note: prepending " " because GPT-2 tokenizer
         tok_rows.append(ctx_tokens + end_tokens)
         mask_rows.append([0]*len(ctx_tokens) + [1]*len(end_tokens))
         data["ending_tokens"].append(end_tokens)

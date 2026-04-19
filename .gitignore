@@ -236,3 +236,7 @@ model.safetensors
 **/.venv
 .virtual_documents
 **/.virtual_documents
+log
+**/log
+log.txt
+**/log.txt
